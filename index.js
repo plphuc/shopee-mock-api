@@ -15,59 +15,59 @@ try {
   app.use(cors());
   app.use(express.json());
 
-  fs.readFile('./products.json', 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
+  // fs.readFile('./products.json', 'utf8', (err, data) => {
+  //   if (err) {
+  //     console.error(err);
+  //     return;
+  //   }
 
-    products = JSON.parse(data);
+  //   products = JSON.parse(data);
 
-    fs.writeFile(
-      './suggested.json',
-      utilsFunc.getSuggestedProducts(products),
-      {
-        encoding: 'utf8',
-        flag: 'w',
-      },
-      (err) => {
-        if (err) console.log(err);
-        else {
-          console.log('File written successfully\n');
-        }
-      }
-    );
+  //   fs.writeFile(
+  //     './suggested.json',
+  //     utilsFunc.getSuggestedProducts(products),
+  //     {
+  //       encoding: 'utf8',
+  //       flag: 'w',
+  //     },
+  //     (err) => {
+  //       if (err) console.log(err);
+  //       else {
+  //         console.log('File written successfully\n');
+  //       }
+  //     }
+  //   );
 
-    fs.writeFile(
-      './bestSeller.json',
-      utilsFunc.getBestSellerProducts(products),
-      {
-        encoding: 'utf8',
-        flag: 'w',
-      },
-      (err) => {
-        if (err) console.log(err);
-        else {
-          console.log('File written successfully\n');
-        }
-      }
-    );
-    fs.readFile('./suggested.json', 'utf-8', (err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      suggestedProducts = JSON.parse(data);
-    });
+  //   fs.writeFile(
+  //     './bestSeller.json',
+  //     utilsFunc.getBestSellerProducts(products),
+  //     {
+  //       encoding: 'utf8',
+  //       flag: 'w',
+  //     },
+  //     (err) => {
+  //       if (err) console.log(err);
+  //       else {
+  //         console.log('File written successfully\n');
+  //       }
+  //     }
+  //   );
+  //   fs.readFile('./suggested.json', 'utf-8', (err, data) => {
+  //     if (err) {
+  //       console.error(err);
+  //       return;
+  //     }
+  //     suggestedProducts = JSON.parse(data);
+  //   });
 
-    fs.readFile('./bestSeller.json', 'utf-8', (err, data) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-      bestSellerProducts = JSON.parse(data);
-    });
-  });
+  //   fs.readFile('./bestSeller.json', 'utf-8', (err, data) => {
+  //     if (err) {
+  //       console.error(err);
+  //       return;
+  //     }
+  //     bestSellerProducts = JSON.parse(data);
+  //   });
+  // });
 
   // app.get('/products', (req, res) => {
   //   const page = parseInt(req.query.page) || 1;

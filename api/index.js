@@ -2,15 +2,17 @@ import express from 'express';
 import fs from 'fs';
 import cors from 'cors';
 import Fuse from 'fuse.js';
-import * as utilsFunc from './utilsFunc.js'
+import * as utilsFunc from '../utilsFunc.js'
 
 const app = express();
 const port = 3000;
 let products;
 let suggestedProducts;
 let bestSellerProducts;
+
 // https://expressjs.com/en/resources/middleware/cors.html
 app.use(cors());
+app.use(express.json())
 
 fs.readFile('./products.json', 'utf8', (err, data) => {
   if (err) {

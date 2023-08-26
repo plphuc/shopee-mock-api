@@ -69,58 +69,58 @@ try {
     });
   });
 
-  app.get('/products', (req, res) => {
-    const page = parseInt(req.query.page) || 1;
-    const size = parseInt(req.query.size) || 10;
-    const productOnThisPage = products.slice((page - 1) * size, page * size);
-    res.json({
-      products: productOnThisPage,
-      total: products.length,
-      count: productOnThisPage.length,
-    });
-  });
+  // app.get('/products', (req, res) => {
+  //   const page = parseInt(req.query.page) || 1;
+  //   const size = parseInt(req.query.size) || 10;
+  //   const productOnThisPage = products.slice((page - 1) * size, page * size);
+  //   res.json({
+  //     products: productOnThisPage,
+  //     total: products.length,
+  //     count: productOnThisPage.length,
+  //   });
+  // });
 
-  app.get('/suggested', (req, res) => {
-    const page = parseInt(req.query.page) || 1;
-    const size = parseInt(req.query.size) || 10;
-    const productOnThisPage = suggestedProducts.slice(
-      (page - 1) * size,
-      page * size
-    );
-    res.json({
-      suggested: productOnThisPage,
-      total: suggestedProducts.length,
-      count: productOnThisPage.length,
-    });
-  });
+  // app.get('/suggested', (req, res) => {
+  //   const page = parseInt(req.query.page) || 1;
+  //   const size = parseInt(req.query.size) || 10;
+  //   const productOnThisPage = suggestedProducts.slice(
+  //     (page - 1) * size,
+  //     page * size
+  //   );
+  //   res.json({
+  //     suggested: productOnThisPage,
+  //     total: suggestedProducts.length,
+  //     count: productOnThisPage.length,
+  //   });
+  // });
 
-  app.get('/bestSeller', (req, res) => {
-    const page = parseInt(req.query.page) || 1;
-    const size = parseInt(req.query.size) || 10;
-    const productOnThisPage = bestSellerProducts.slice(
-      (page - 1) * size,
-      page * size
-    );
-    res.json({
-      bestSeller: productOnThisPage,
-      total: bestSellerProducts.length,
-      count: productOnThisPage.length,
-    });
-  });
+  // app.get('/bestSeller', (req, res) => {
+  //   const page = parseInt(req.query.page) || 1;
+  //   const size = parseInt(req.query.size) || 10;
+  //   const productOnThisPage = bestSellerProducts.slice(
+  //     (page - 1) * size,
+  //     page * size
+  //   );
+  //   res.json({
+  //     bestSeller: productOnThisPage,
+  //     total: bestSellerProducts.length,
+  //     count: productOnThisPage.length,
+  //   });
+  // });
 
-  app.get('/search', (req, res) => {
-    const textQuery = req.query.text;
-    const fuseOptions = {
-      isCaseSensitive: false,
-      keys: ['title', 'category', 'brand'],
-    };
+  // app.get('/search', (req, res) => {
+  //   const textQuery = req.query.text;
+  //   const fuseOptions = {
+  //     isCaseSensitive: false,
+  //     keys: ['title', 'category', 'brand'],
+  //   };
 
-    const fuse = new Fuse(products, fuseOptions);
+  //   const fuse = new Fuse(products, fuseOptions);
 
-    // Change the pattern
-    // const searchPattern = ""
-    res.json(fuse.search(textQuery, { limit: 5 }));
-  });
+  //   // Change the pattern
+  //   // const searchPattern = ""
+  //   res.json(fuse.search(textQuery, { limit: 5 }));
+  // });
 
   app.post('/*', (req, res) => {
     res.json({ message: 'Hello World, from express' });

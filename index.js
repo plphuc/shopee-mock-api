@@ -14,6 +14,7 @@ let bestSellerProducts;
 app.use(cors());
 app.use(express.json())
 
+try {
 fs.readFile('./products.json', 'utf8', (err, data) => {
   if (err) {
     console.error(err);
@@ -67,6 +68,10 @@ fs.readFile('./products.json', 'utf8', (err, data) => {
     bestSellerProducts = JSON.parse(data);
   });
 });
+}
+catch (err) {
+  console.log(err);
+}
 
 
 app.get('/products', (req, res) => {

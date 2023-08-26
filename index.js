@@ -2,7 +2,7 @@ import express from 'express';
 import fs from 'fs';
 import cors from 'cors';
 import Fuse from 'fuse.js';
-import * as utilsFunc from '../utilsFunc.js'
+import * as utilsFunc from './utilsFunc.js'
 
 const app = express();
 const port = 3000;
@@ -133,3 +133,5 @@ app.post('/*', (req, res) => {
 app.listen(port, () =>
   console.log(`Hello world, app is listening on port ${port}!`)
 );
+
+export default app

@@ -11,8 +11,8 @@ let suggestedProducts;
 let bestSellerProducts;
 
 // https://expressjs.com/en/resources/middleware/cors.html
-app.use(cors());
-app.use(express.json());
+// app.use(cors());
+// app.use(express.json());
 
 // fs.readFile('./products.json', 'utf8', (err, data) => {
 //   if (err) {

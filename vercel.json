@@ -13,5 +13,6 @@
     }
   ],
   "buildCommand": "npm run build",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "outputDirectory": "src/public"
 }

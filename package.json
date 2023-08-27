@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js",
-    "build": "pwd && babel src -d dist && ls"
+    "build": "pwd && babel src -d dist && ls dist"
   },
   "author": "",
   "license": "ISC",

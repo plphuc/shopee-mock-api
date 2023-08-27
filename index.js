@@ -122,7 +122,7 @@ try {
   //   res.json(fuse.search(textQuery, { limit: 5 }));
   // });
 
-  app.post('/*', (req, res) => {
+  app.get('/', (req, res) => {
     res.json({ message: 'Hello World, from express' });
   });
 

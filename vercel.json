@@ -14,5 +14,5 @@
   ],
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "outputDirectory": "/vercel/path0/public"
+  "outputDirectory": "/vercel/path0/publi"
 }

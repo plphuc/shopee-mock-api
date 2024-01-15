@@ -2,11 +2,12 @@
   "name": "shopee-mock-api",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "build": "pwd && babel src -d dist && ls dist"
+    "start": "nodemon src/index.js",
+    "build": "babel src -d ."
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +16,6 @@
     "express": "^4.18.2",
     "fuse.js": "^6.6.2"
   },
-  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.22.10",
     "@babel/core": "^7.22.11",

@@ -1,0 +1,12 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: shopee-mock-api
+    src: ./
+    engine: nodejs16
+    primary: true
+    public_routes:
+      - "/*"
+    commands:
+     - npm run build
+    run: node index.js

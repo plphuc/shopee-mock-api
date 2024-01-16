@@ -2,14 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "./index.js",
       "use": "@now/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "/"
     }
-  ]
+  ],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "dist"
 }

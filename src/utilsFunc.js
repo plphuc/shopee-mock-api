@@ -16,6 +16,7 @@ export function getSuggestedProducts(products) {
 }
 
 export function getBestSellerProducts(products) {
+  console.log(products);
   let soldCount = products.map((product) => {
     return product.sold
   })

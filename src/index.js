@@ -1,5 +1,5 @@
-import express from 'express';
 import fs from 'fs';
+import express from 'express';
 import cors from 'cors';
 import Fuse from 'fuse.js';
 import * as utilsFunc from './utilsFunc.js';
